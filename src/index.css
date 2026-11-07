@@ -1,0 +1,118 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-comic: 'Bangers', cursive, system-ui, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+}
+
+.font-comic {
+  font-family: var(--font-comic);
+  letter-spacing: 0.05em;
+}
+
+/* Comic Book Halftone Dots Background */
+.comic-dots-bg {
+  background-color: #fefce8;
+  background-image: radial-gradient(#cbd5e1 1.8px, transparent 1.8px);
+  background-size: 18px 18px;
+}
+
+.comic-dots-dark {
+  background-color: #0b0f19;
+  background-image: radial-gradient(#1e293b 2px, transparent 2px);
+  background-size: 18px 18px;
+}
+
+/* Comic Boxes with Bold Black Borders & Hard Offset Shadows */
+.comic-panel {
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comic-panel-dark {
+  background: #111827;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px #000000;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comic-card {
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comic-card:hover {
+  transform: translate(-3px, -3px) rotate(-0.5deg);
+  box-shadow: 7px 7px 0px #000000;
+}
+
+.comic-card:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+/* Comic Action Buttons */
+.comic-btn {
+  border: 3px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
+  font-family: var(--font-comic);
+  letter-spacing: 0.05em;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.comic-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0px #000000;
+}
+
+.comic-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+/* Comic Badges / Stickers */
+.comic-badge {
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 0px #000000;
+  font-family: var(--font-comic);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Comic Speech Bubble Triangle */
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Custom Comic Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-left: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #facc15;
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
